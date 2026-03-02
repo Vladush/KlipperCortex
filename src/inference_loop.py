@@ -68,7 +68,7 @@ class LocalCamera(Camera):
     
     def capture(self):
         if DRY_RUN:
-            logging.info(f"[DRY_RUN] Local Capture")
+            logging.info("[DRY_RUN] Local Capture")
             return Image.new('RGB', (CAMERA_WIDTH, CAMERA_HEIGHT), color='gray')
 
         ret, frame = self.cap.read()
