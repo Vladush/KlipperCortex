@@ -1,0 +1,40 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints
+.DS_Store
+.env
+.venv
+# Large files / Checkpoints
+*.tgz
+*.tflite
+*.mlir
+*.vmfb
+*.weight
+*.weights
+*.onnx
+*.pb
+variables.data-*
+variables.index
+models/model_tflite/
+
+# User-specific configurations
+connections.json
+mcp_config.json
+.keys/
+.snapshots/
+
+# Build artifacts and caching
+build/
+build_*/
+.cache/
+compile_commands.json
+
+# Compiled binaries
+src/model_runner
+
+# AI agent configs
+.agent/
+AGENTS.md
+
+# Dev scratch scripts
+dev/

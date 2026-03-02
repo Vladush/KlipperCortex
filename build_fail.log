@@ -1,0 +1,189 @@
+===================================================
+   KlipperCortex: C++ Runner Builder
+===================================================
+Target Architecture: cortex-a72
+Detected x86_64 host. Enabling cross-compilation toolchain...
+Configuring for Cortex-A72 (Raspberry Pi 4 / Pi 400)...
+Cleaning old build directory: build_cortex-a72...
+Running CMake Generate...
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/aarch64-linux-gnu-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/aarch64-linux-gnu-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/aarch64-linux-gnu-gcc
+-- No build type selected, default to Release
+-- Could not find nvcc, please set CUDAToolkit_ROOT.
+-- IREE HAL drivers:
+--   - local-sync
+--   - local-task
+-- IREE HAL local executable library loaders:
+--   - embedded-elf
+--   - system-library
+--   - vmvx-module
+-- IREE HAL local executable plugin mechanisms:
+--   - embedded-elf
+--   - system-library
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Looking for dlopen
+-- Looking for dlopen - found
+-- Performing Test IREE_SUPPORTS_VISIBILITY_DEFAULT
+-- Performing Test IREE_SUPPORTS_VISIBILITY_DEFAULT - Success
+-- Found Git: /usr/bin/git (found version "2.34.1") 
+fatal: detected dubious ownership in repository at '/workspace/third_party/iree'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /workspace/third_party/iree
+-- Not adding LLVM/MLIR because the configuration does not require it
+-- Google Benchmark version: v1.9.5, normalized to 1.9.5
+-- Looking for shm_open in rt
+-- Looking for shm_open in rt - found
+-- Performing Test HAVE_CXX_FLAG_WALL
+-- Performing Test HAVE_CXX_FLAG_WALL - Success
+-- Performing Test HAVE_CXX_FLAG_WEXTRA
+-- Performing Test HAVE_CXX_FLAG_WEXTRA - Success
+-- Performing Test HAVE_CXX_FLAG_WSHADOW
+-- Performing Test HAVE_CXX_FLAG_WSHADOW - Success
+-- Performing Test HAVE_CXX_FLAG_WFLOAT_EQUAL
+-- Performing Test HAVE_CXX_FLAG_WFLOAT_EQUAL - Success
+-- Performing Test HAVE_CXX_FLAG_WOLD_STYLE_CAST
+-- Performing Test HAVE_CXX_FLAG_WOLD_STYLE_CAST - Success
+-- Performing Test HAVE_CXX_FLAG_WCONVERSION
+-- Performing Test HAVE_CXX_FLAG_WCONVERSION - Success
+-- Performing Test HAVE_CXX_FLAG_WFORMAT_2
+-- Performing Test HAVE_CXX_FLAG_WFORMAT_2 - Success
+-- Performing Test HAVE_CXX_FLAG_WERROR
+-- Performing Test HAVE_CXX_FLAG_WERROR - Success
+-- Performing Test HAVE_CXX_FLAG_WSUGGEST_OVERRIDE
+-- Performing Test HAVE_CXX_FLAG_WSUGGEST_OVERRIDE - Success
+-- Performing Test HAVE_CXX_FLAG_PEDANTIC
+-- Performing Test HAVE_CXX_FLAG_PEDANTIC - Success
+-- Performing Test HAVE_CXX_FLAG_PEDANTIC_ERRORS
+-- Performing Test HAVE_CXX_FLAG_PEDANTIC_ERRORS - Success
+-- Performing Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32
+-- Performing Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32 - Failed
+-- Performing Test HAVE_CXX_FLAG_FSTRICT_ALIASING
+-- Performing Test HAVE_CXX_FLAG_FSTRICT_ALIASING - Success
+-- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS
+-- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS - Success
+-- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED
+-- Performing Test HAVE_CXX_FLAG_WNO_DEPRECATED - Success
+-- Performing Test HAVE_CXX_FLAG_WSTRICT_ALIASING
+-- Performing Test HAVE_CXX_FLAG_WSTRICT_ALIASING - Success
+-- Performing Test HAVE_CXX_FLAG_WTHREAD_SAFETY
+-- Performing Test HAVE_CXX_FLAG_WTHREAD_SAFETY - Failed
+-- Performing Test HAVE_CXX_FLAG_COVERAGE
+-- Performing Test HAVE_CXX_FLAG_COVERAGE - Success
+CMake Warning at third_party/iree/third_party/benchmark/cmake/CXXFeatureCheck.cmake:65 (message):
+  If you see build failures due to cross compilation, try setting
+  HAVE_STEADY_CLOCK to 0
+Call Stack (most recent call first):
+  third_party/iree/third_party/benchmark/CMakeLists.txt:332 (cxx_feature_check)
+
+
+-- Performing Test STEADY_CLOCK -- success
+CMake Warning at third_party/iree/third_party/benchmark/cmake/CXXFeatureCheck.cmake:65 (message):
+  If you see build failures due to cross compilation, try setting
+  HAVE_PTHREAD_AFFINITY to 0
+Call Stack (most recent call first):
+  third_party/iree/third_party/benchmark/CMakeLists.txt:336 (cxx_feature_check)
+
+
+-- Performing Test PTHREAD_AFFINITY -- success
+-- *Not* building or importing IREE's compiler tools.
+   Set IREE_BUILD_COMPILER to build them or IREE_HOST_BIN_DIR to import them.
+-- Configuring IREE runtime plugins
+-- Runtime tracing disabled
+-- iree_allocator_system() using `IREE_ALLOCATOR_LIBC_*`
+-- Performing Test IREE_UK_BUILD_ARM_64_FULLFP16
+-- Performing Test IREE_UK_BUILD_ARM_64_FULLFP16 - Success
+-- Performing Test IREE_UK_BUILD_ARM_64_FP16FML
+-- Performing Test IREE_UK_BUILD_ARM_64_FP16FML - Success
+-- Performing Test IREE_UK_BUILD_ARM_64_BF16
+-- Performing Test IREE_UK_BUILD_ARM_64_BF16 - Success
+-- Performing Test IREE_UK_BUILD_ARM_64_DOTPROD
+-- Performing Test IREE_UK_BUILD_ARM_64_DOTPROD - Success
+-- Performing Test IREE_UK_BUILD_ARM_64_I8MM
+-- Performing Test IREE_UK_BUILD_ARM_64_I8MM - Success
+-- IREE task topology: using sysfs (Linux)
+-- Looking for dl_iterate_phdr
+-- Looking for dl_iterate_phdr - found
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /workspace/build_cortex-a72
+Running CMake Build...
+[  0%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/src/cli/flatcc_cli.c.o
+[  0%] Building C object third_party/iree/runtime/src/iree/builtins/ukernel/arch/arm_64/CMakeFiles/iree_builtins_ukernel_arch_arm_64_arm_64_i8mm.objects.dir/mmt4d_arm_64_i8mm.c.o
+[  2%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/src/compiler/hash_tables/symbol_table.c.o
+[  0%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/flatcc_parsing.dir/__/__/__/third_party/flatcc/src/runtime/verifier.c.o
+[  2%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/external/hash/cmetrohash64.c.o
+[  2%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/external/hash/str_set.c.o
+[  2%] Building C object third_party/iree/runtime/src/iree/builtins/ukernel/arch/arm_64/CMakeFiles/iree_builtins_ukernel_arch_arm_64_arm_64_bf16.objects.dir/mmt4d_arm_64_bf16.c.o
+[  2%] Building C object third_party/iree/runtime/src/iree/builtins/ukernel/arch/arm_64/CMakeFiles/iree_builtins_ukernel_arch_arm_64_arm_64_fp16fml.objects.dir/mmt4d_arm_64_fp16fml.c.o
+[  2%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/external/hash/ptr_set.c.o
+[  2%] Building C object third_party/iree/runtime/src/iree/builtins/ukernel/arch/arm_64/CMakeFiles/iree_builtins_ukernel_arch_arm_64_arm_64_fullfp16.objects.dir/mmt4d_arm_64_fullfp16.c.o
+[  4%] Building C object third_party/iree/runtime/src/iree/builtins/ukernel/arch/arm_64/CMakeFiles/iree_builtins_ukernel_arch_arm_64_arm_64_dotprod.objects.dir/mmt4d_arm_64_dotprod.c.o
+[  4%] Building C object third_party/iree/runtime/src/iree/base/internal/CMakeFiles/iree_base_internal_time.objects.dir/time.c.o
+cc1: error: switch '-mcpu=cortex-a72' conflicts with '-march=armv8.2-a+i8mm' switch [-Werror]
+[  4%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/src/compiler/hash_tables/name_table.c.o
+cc1: error: switch '-mcpu=cortex-a72' conflicts with '-march=armv8.2-a+dotprod' switch [-Werror]
+cc1: error: switch '-mcpu=cortex-a72' conflicts with '-march=armv8.2-a+bf16' switch [-Werror]
+[  4%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/src/compiler/hash_tables/scope_table.c.o
+[  4%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/src/compiler/hash_tables/value_set.c.o
+[  4%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/src/compiler/semantics.c.o
+[  4%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/src/compiler/hash_tables/schema_table.c.o
+[  4%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/src/compiler/fileio.c.o
+[  7%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/src/compiler/parser.c.o
+[  7%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/src/compiler/coerce.c.o
+cc1: error: switch '-mcpu=cortex-a72' conflicts with '-march=armv8.2-a+fp16' switch [-Werror]
+cc1: error: switch '-mcpu=cortex-a72' conflicts with '-march=armv8.2-a+fp16fml' switch [-Werror]
+[  7%] Built target iree_base_internal_time.objects
+[  7%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/src/compiler/codegen_schema.c.o
+[  7%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/src/compiler/codegen_c.c.o
+[  7%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/src/compiler/flatcc.c.o
+[  9%] Linking C static library libiree_base_internal_time.a
+cc1: all warnings being treated as errors
+[  9%] Built target iree_base_internal_time
+gmake[3]: *** [third_party/iree/runtime/src/iree/builtins/ukernel/arch/arm_64/CMakeFiles/iree_builtins_ukernel_arch_arm_64_arm_64_fp16fml.objects.dir/build.make:76: third_party/iree/runtime/src/iree/builtins/ukernel/arch/arm_64/CMakeFiles/iree_builtins_ukernel_arch_arm_64_arm_64_fp16fml.objects.dir/mmt4d_arm_64_fp16fml.c.o] Error 1
+[  9%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/src/compiler/codegen_c_reader.c.o
+gmake[2]: *** [CMakeFiles/Makefile2:7574: third_party/iree/runtime/src/iree/builtins/ukernel/arch/arm_64/CMakeFiles/iree_builtins_ukernel_arch_arm_64_arm_64_fp16fml.objects.dir/all] Error 2
+gmake[2]: *** Waiting for unfinished jobs....
+[ 11%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/src/compiler/codegen_c_sort.c.o
+[ 11%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/src/compiler/codegen_c_builder.c.o
+cc1: all warnings being treated as errors
+[ 11%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/src/compiler/codegen_c_sorter.c.o
+gmake[3]: *** [third_party/iree/runtime/src/iree/builtins/ukernel/arch/arm_64/CMakeFiles/iree_builtins_ukernel_arch_arm_64_arm_64_i8mm.objects.dir/build.make:76: third_party/iree/runtime/src/iree/builtins/ukernel/arch/arm_64/CMakeFiles/iree_builtins_ukernel_arch_arm_64_arm_64_i8mm.objects.dir/mmt4d_arm_64_i8mm.c.o] Error 1
+gmake[2]: *** [CMakeFiles/Makefile2:7730: third_party/iree/runtime/src/iree/builtins/ukernel/arch/arm_64/CMakeFiles/iree_builtins_ukernel_arch_arm_64_arm_64_i8mm.objects.dir/all] Error 2
+[ 11%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/src/compiler/codegen_c_json_parser.c.o
+[ 11%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/src/compiler/codegen_c_verifier.c.o
+cc1: all warnings being treated as errors
+gmake[3]: *** [third_party/iree/runtime/src/iree/builtins/ukernel/arch/arm_64/CMakeFiles/iree_builtins_ukernel_arch_arm_64_arm_64_dotprod.objects.dir/build.make:76: third_party/iree/runtime/src/iree/builtins/ukernel/arch/arm_64/CMakeFiles/iree_builtins_ukernel_arch_arm_64_arm_64_dotprod.objects.dir/mmt4d_arm_64_dotprod.c.o] Error 1
+gmake[2]: *** [CMakeFiles/Makefile2:7678: third_party/iree/runtime/src/iree/builtins/ukernel/arch/arm_64/CMakeFiles/iree_builtins_ukernel_arch_arm_64_arm_64_dotprod.objects.dir/all] Error 2
+[ 11%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/src/compiler/codegen_c_json_printer.c.o
+[ 11%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/src/runtime/builder.c.o
+[ 14%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/src/runtime/emitter.c.o
+cc1: all warnings being treated as errors
+gmake[3]: *** [third_party/iree/runtime/src/iree/builtins/ukernel/arch/arm_64/CMakeFiles/iree_builtins_ukernel_arch_arm_64_arm_64_fullfp16.objects.dir/build.make:76: third_party/iree/runtime/src/iree/builtins/ukernel/arch/arm_64/CMakeFiles/iree_builtins_ukernel_arch_arm_64_arm_64_fullfp16.objects.dir/mmt4d_arm_64_fullfp16.c.o] Error 1
+gmake[2]: *** [CMakeFiles/Makefile2:7522: third_party/iree/runtime/src/iree/builtins/ukernel/arch/arm_64/CMakeFiles/iree_builtins_ukernel_arch_arm_64_arm_64_fullfp16.objects.dir/all] Error 2
+[ 14%] Building C object third_party/iree/build_tools/third_party/flatcc/CMakeFiles/iree-flatcc-cli.dir/__/__/__/third_party/flatcc/src/runtime/refmap.c.o
+cc1: all warnings being treated as errors
+gmake[3]: *** [third_party/iree/runtime/src/iree/builtins/ukernel/arch/arm_64/CMakeFiles/iree_builtins_ukernel_arch_arm_64_arm_64_bf16.objects.dir/build.make:76: third_party/iree/runtime/src/iree/builtins/ukernel/arch/arm_64/CMakeFiles/iree_builtins_ukernel_arch_arm_64_arm_64_bf16.objects.dir/mmt4d_arm_64_bf16.c.o] Error 1
+gmake[2]: *** [CMakeFiles/Makefile2:7626: third_party/iree/runtime/src/iree/builtins/ukernel/arch/arm_64/CMakeFiles/iree_builtins_ukernel_arch_arm_64_arm_64_bf16.objects.dir/all] Error 2
+[ 14%] Linking C static library libflatcc_parsing.a
+[ 14%] Built target flatcc_parsing
+[ 14%] Linking C executable ../../../tools/iree-flatcc-cli
+[ 14%] Built target iree-flatcc-cli
+gmake[1]: *** [CMakeFiles/Makefile2:3414: CMakeFiles/model_runner.dir/rule] Error 2
+gmake: *** [Makefile:170: model_runner] Error 2

@@ -1,0 +1,32 @@
+{
+    "mcpServers": {
+        "voron-ssh-gateway": {
+            "command": "python3",
+            "args": [
+                "-m",
+                "mcp_ssh_gateway"
+            ],
+            "env": {
+                "SSH_MODE": "direct",
+                "SSH_HOST": "YOUR_PRINTER_IP",
+                "SSH_PORT": "22",
+                "SSH_USER": "pi",
+                "SSH_KEY_FILE": "/path/to/your/private/key"
+            },
+            "disabled": false
+        },
+        "moonraker-api": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@mcp-market/3d-printer-server"
+            ],
+            "env": {
+                "PRINTER_TYPE": "klipper",
+                "PRINTER_IP": "YOUR_PRINTER_IP",
+                "PRINTER_PORT": "7125"
+            },
+            "disabled": false
+        }
+    }
+}

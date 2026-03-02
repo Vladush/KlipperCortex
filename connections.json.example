@@ -1,0 +1,12 @@
+[
+    {
+        "name": "voron-pi-edge",
+        "mode": "direct",
+        "user": "pi",
+        "host": "192.168.1.100",
+        "port": 22,
+        "id_file": "/path/to/your/key",
+        "target_dir": "/home/pi",
+        "service_name": "klipper-cortex"
+    }
+]

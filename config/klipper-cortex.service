@@ -1,0 +1,21 @@
+[Unit]
+Description=KlipperCortex Spaghetti Detection
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi
+ExecStart=/home/pi/.venv/bin/python3 /home/pi/inference_loop.py
+Restart=on-failure
+RestartSec=10
+
+Environment=PRINTER_HOST=localhost
+Environment=MOONRAKER_PORT=7125
+Environment=MODEL_PATH=/home/pi/spaghetti_v2.vmfb
+Environment=THRESHOLD=0.85
+Environment=CAMERA_TYPE=http
+
+[Install]
+WantedBy=multi-user.target

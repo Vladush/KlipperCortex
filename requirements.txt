@@ -1,0 +1,10 @@
+# Core Inference
+iree-runtime>=2.5.0
+numpy
+Pillow
+
+# Network & API
+requests
+
+# Local Camera Support (Headless for server environments)
+opencv-python-headless
