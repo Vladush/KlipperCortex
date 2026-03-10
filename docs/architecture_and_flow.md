@@ -33,17 +33,20 @@ The entire process happens in two main stages: **Compilation** (on your PC) and 
 ```mermaid
 graph LR
     subgraph "Host PC"
-        A[Model (ONNX/TFLite)] -->|Input| B(Dockerized Toolchain);
-        B -->|onnx2tf + IREE| C[Optimized .vmfb Module];
+        A["Model (ONNX/TFLite)"] --> B["Dockerized Toolchain"]
+        B --> C["Optimized .vmfb Module"]
     end
     
-    C -->|Transfer File| D[Raspberry Pi];
+    C --> D["Raspberry Pi"]
     
     subgraph "Raspberry Pi (Target)"
-        D -->|Load| E[Inference Runtime];
-        F[Camera] -->|Image| E;
-        E -->|Detects Spaghetti?| G{Yes/No};
-        G -- Yes --> H[Pause Printer];
+        D --> E1["Python (inference_loop.py)"]
+        D --> E2["C++ (model_runner.cpp)"]
+        F["Camera"] --> E1
+        F["Camera"] --> E2
+        E1 --> G{Detects Spaghetti?}
+        E2 --> G
+        G -- Yes --> H["Pause Printer"]
     end
 ```
 
@@ -97,7 +100,15 @@ Finally, `iree-compile` lowers the TOSA MLIR to machine code LLVM IR, optimizes 
 
 ## 5. Inference Loop (Runtime)
 
-Once the `.vmfb` file is deployed to the Raspberry Pi, the Python script `src/inference_loop.py` manages the detection process.
+Once the `.vmfb` file is deployed to the Raspberry Pi, you can use either the Python script `src/inference_loop.py` or the high-performance C++ runner `src/model_runner.cpp`.
+
+### Python Loop (`inference_loop.py`)
+
+Provides a feature-rich environment with easy integration for HTTP cameras and Moonraker lighting.
+
+### C++ Runner (`model_runner.cpp`)
+
+A lightweight, zero-overhead alternative for minimum latency. Ideal if you want to avoid installing the Python IREE runtime on the Pi.
 
 ### Runtime Features
 
